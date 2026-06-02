@@ -1,4 +1,3 @@
-from cProfile import label
 from pathlib import Path
 from PIL import Image
 from torch.utils.data import Dataset
@@ -42,7 +41,7 @@ class DocumentDataset(Dataset):
         sample = self.samples[idx]
         image = Image.open(sample["image_path"]).convert("RGB")
 
-        word, boxes, labels = read_annotation(
+        word, boxes, labels = read_annotations(
             annotation_path = sample["annotation_path"],
             image_path = sample["image_path"]
         )
