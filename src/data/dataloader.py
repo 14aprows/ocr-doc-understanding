@@ -14,12 +14,12 @@ def collate_fn(batch):
 
 def get_dataloader():
     train_dataset = DocumentDataset(
-        image_dir = TRAIN_IMAGES_DIR,
+        images_dir = TRAIN_IMAGES_DIR,
         annotations_dir = TRAIN_ANNOTATIONS_DIR
     )
 
     val_dataset = DocumentDataset(
-        image_dir = VAL_IMAGES_DIR,
+        images_dir = VAL_IMAGES_DIR,
         annotations_dir = VAL_ANNOTATIONS_DIR
     )
 
