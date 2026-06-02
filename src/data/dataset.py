@@ -1,7 +1,7 @@
 from pathlib import Path
 from PIL import Image
 from torch.utils.data import Dataset
-from data.processing import read_annotations
+from src.data.processing import read_annotations
 
 LABEL2ID = {
     "other": 0,

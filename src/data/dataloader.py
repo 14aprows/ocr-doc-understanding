@@ -1,6 +1,6 @@
 from torch.utils.data import DataLoader
-from configs.config import BATCH_SIZE, TRAIN_ANNOTATIONS_DIR, TRAIN_IMAGES_DIR, VAL_ANNOTATIONS_DIR, VAL_IMAGES_DIR
-from data.dataset import DocumentDataset
+from src.configs.config import BATCH_SIZE, TRAIN_ANNOTATIONS_DIR, TRAIN_IMAGES_DIR, VAL_ANNOTATIONS_DIR, VAL_IMAGES_DIR
+from src.data.dataset import DocumentDataset
 
 def collate_fn(batch):
     return {
