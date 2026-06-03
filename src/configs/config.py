@@ -1,5 +1,5 @@
 from pathlib import Path
-import torch
+# import torch
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
@@ -16,10 +16,11 @@ VAL_ANNOTATIONS_DIR = VAL_DIR / "annotations"
 OCR_DATA_DIR = PROJECT_ROOT / "dataset_ocr"
 OCR_TRAIN_DIR = OCR_DATA_DIR / "train"
 OCR_VAL_DIR = OCR_DATA_DIR / "val"
+
 OCR_TRAIN_IMAGES_DIR = OCR_TRAIN_DIR / "images"
 OCR_VAL_IMAGES_DIR = OCR_VAL_DIR / "images"
-OCR_TRAIN_LABELS_DIR = OCR_TRAIN_DIR / "labels"
-OCR_VAL_LABELS_DIR = OCR_VAL_DIR / "labels"
+OCR_TRAIN_LABELS_PATH = OCR_TRAIN_DIR / "labels.txt"
+OCR_VAL_LABELS_PATH = OCR_VAL_DIR / "labels.txt"
 
 OCR_IMAGE_HEIGHT = 32
 OCR_IMAGE_WIDTH = 128
@@ -31,4 +32,4 @@ LEARNING_RATE = 5e-5
 WEIGHT_DECAY = 0.01
 SEED=42
 
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+# DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
