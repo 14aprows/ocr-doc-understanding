@@ -1,5 +1,4 @@
 import torch 
-from torch._inductor.config import batch_fusion
 import torch.nn as nn
 
 class CTCLosCRNNCTCLosss(nn.Module):
