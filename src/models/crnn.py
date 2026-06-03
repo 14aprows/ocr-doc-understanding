@@ -1,11 +1,10 @@
-import torch 
 import torch.nn as nn
 
 class CRNN(nn.Module):
     def __init__(self, in_channels=1, hidden_size=256, num_classes=None, num_layers=2):
         super().__init__()
 
-        if num_classes == None:
+        if num_classes is None:
             raise ValueError("num_classes must be specified")
         
         self.cnn = nn.Sequential(
