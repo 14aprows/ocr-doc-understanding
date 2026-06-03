@@ -1,5 +1,5 @@
 from torch.utils.data import DataLoader
-from src.configs.config import BATCH_SIZE, OCR_TRAIN_IMAGES_DIR, OCR_TRAIN_DIR, OCR_VAL_IMAGES_DIR, OCR_VAL_LABELS_DIR
+from src.configs.config import BATCH_SIZE, OCR_TRAIN_IMAGES_DIR, OCR_VAL_IMAGES_DIR, OCR_TRAIN_LABELS_PATH, OCR_VAL_LABELS_PATH
 from src.data.ocr_dataset import OCRDataset
 from src.data.ocr_transform import get_ocr_transform
 from src.utils.collate import collate_fn
@@ -9,13 +9,13 @@ def get_ocr_dataloader():
 
     train_dataset = OCRDataset(
         images_dir = OCR_TRAIN_IMAGES_DIR,
-        labels_path = OCR_TRAIN_DIR,
+        labels_path = OCR_TRAIN_LABELS_PATH,
         transform = transform
     )
 
     val_dataset = OCRDataset(
         images_dir = OCR_VAL_IMAGES_DIR,
-        labels_path = OCR_VAL_LABELS_DIR,
+        labels_path = OCR_VAL_LABELS_PATH,
         transform = transform
     )
 
