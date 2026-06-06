@@ -11,7 +11,7 @@ from src.configs.config import (
 )
 from src.data.ocr_dataloader import get_ocr_dataloader
 from src.models.crnn import CRNN
-from src.losses.ctc_loss import CTCLosCRNNCTCLosss
+from src.losses.ctc_loss import CRNNCTCLoss
 from src.utils.text_encoder import TextEncoder
 from src.utils.csv_logger import get_csv_log_path, init_csv_log, append_csv_log
 from src.engine.trainer import train_one_epoch, validate_one_epoch
@@ -34,7 +34,7 @@ def main():
 
     BEST_MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-    criterion = CTCLosCRNNCTCLosss(blank_idx=encoder.blank_idx)
+    criterion = CRNNCTCLoss(blank_idx=encoder.blank_idx)
 
     optimizer = optim.AdamW(
         model.parameters(),
