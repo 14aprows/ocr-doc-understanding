@@ -1,6 +1,6 @@
 class TextEncoder:
     def __init__(self):
-        self.chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.,:/-()'\"#&+%?!;_ "
+        self.chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.,:/-()'\"#&+%?!;_ $*<=>@[\\]~°áüο–☐☑\uf702\uf703"
         self.blank_idx = 0
         self.char2idx = {
             char: idx + 1 
