@@ -27,7 +27,7 @@ BEST_MODEL_PATH = CHECKPOINT_DIR / "best_ocr_model.pth"
 LAST_MODEL_PATH = CHECKPOINT_DIR / "last_ocr_model.pth"
 
 LOG_DIR = PROJECT_ROOT / "logs"
-TRAIN_LOG_PATH = LOG_DIR / "ocr_training_log.csv"
+# TRAIN_LOG_PATH = LOG_DIR / "ocr_training_log.csv"
 
 OCR_IMAGE_HEIGHT = 32
 OCR_IMAGE_WIDTH = 128
