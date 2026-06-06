@@ -12,8 +12,8 @@ def collate_fn(batch):
     target_lengths = []
     for text in texts:
         encoded = encoder.encode(text)
-        if len(encoded) == 0:
-            continue
+        # if len(encoded) == 0:
+        #     continue
         targets.extend(encoded)
         target_lengths.append(len(encoded))
 
