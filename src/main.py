@@ -8,7 +8,7 @@ from src.configs.config import (
 )
 from src.data.ocr_dataloader import get_ocr_dataloader
 from src.models.crnn import CRNN
-from src.losses.ctc_loss import CTCLosCRNNCTCLosss
+from src.losses.ctc_loss import CRNNCTCLoss
 from src.utils.text_encoder import TextEncoder
 from src.engine.trainer import train_one_epoch, validate_one_epoch
 
@@ -25,7 +25,7 @@ def main():
         num_classes=encoder.num_classes(),
     ).to(device)
 
-    criterion = CTCLosCRNNCTCLosss(blank_idx=encoder.blank_idx)
+    criterion = CRNNCTCLoss(blank_idx=encoder.blank_idx)
 
     optimizer = optim.AdamW(
         model.parameters(),
