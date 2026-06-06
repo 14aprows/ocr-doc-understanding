@@ -1,7 +1,7 @@
 import torch 
 import torch.nn as nn
 
-class CTCLosCRNNCTCLosss(nn.Module):
+class CRNNCTCLoss(nn.Module):
     def __init__(self, blank_idx=0):
         super().__init__()
         self.loss_fn = nn.CTCLoss(
