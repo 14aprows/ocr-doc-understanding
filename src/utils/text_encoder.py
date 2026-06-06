@@ -52,7 +52,7 @@ class TextEncoder:
             texts.append(self.decode(pred))
         return texts
 
-    def unknown_char(self, text):
+    def unknown_chars(self, text):
         text = self.normalize_text(text)
         unknown = []
         for char in text:
